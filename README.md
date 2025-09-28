@@ -8,7 +8,7 @@ An interactive HTML quiz based on Northrop Frye's "The Educated Imagination" wit
 - **Interactive Interface**: Modern, responsive design with smooth animations
 - **Real-time Scoring**: Track your progress with accuracy percentage and total score
 - **Immediate Feedback**: Get instant feedback on correct/incorrect answers
-- **Comprehensive Question Bank**: 119 questions covering all chapters of the book
+- **Comprehensive Question Bank**: 100 questions covering all chapters of the book
 
 ## How to Use
 
