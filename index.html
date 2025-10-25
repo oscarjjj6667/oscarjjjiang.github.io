@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OctoForge Studio - Custom 3D Printing Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="icon.png" alt="OctoForge Studio Logo" class="logo-icon">
+                <span>OctoForge Studio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#custom">Custom Art</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bringing Your Ideas to Life</h1>
+            <p>Turning imagination into reality through high-precision 3D printing — from collectible toys and ornaments to custom tools, statues, and relief art.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Our Products</a>
+                <a href="#contact" class="btn btn-primary">Get Quote</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-octopus">
+                <span class="octopus-emoji">🐙</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Toys, Ornaments & Tools -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title">3D Printed Products</h2>
+            <p class="section-subtitle">Toys, ornaments, and useful tools for every need</p>
+            
+            <!-- Products Showcase Background -->
+            <div class="products-showcase">
+                <div class="products-bg">
+                    <div class="products-overlay">
+                        <h3>Our 3D Printed Creations</h3>
+                        <p>Discover the endless possibilities of 3D printing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Toys -->
+            <div class="category-section">
+                <h3 class="category-title">🧸 3D Printed Toys</h3>
+                <div class="products-grid">
+                    <div class="product-card" onclick="openTelescopingModal()">
+                        <div class="product-image">
+                            <img src="toy1.jpg" alt="Telescoping Weapons" class="toy-preview" id="telescoping-preview">
+                        </div>
+                        <h3>Telescoping Weapons</h3>
+                        <p>Extendable swords, lightsabers, and telescoping toys</p>
+                        <div class="product-features">
+                            <span>Extendable</span>
+                            <span>Safe Design</span>
+                            <span>Durable</span>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="openFlexibleModal()">
+                        <div class="product-image">
+                            <img src="toy2.jpg" alt="Flexible Toys" class="toy-preview" id="flexible-preview">
+                        </div>
+                        <h3>Flexible Toys</h3>
+                        <p>Bendable and flexible action figures and creatures</p>
+                        <div class="product-features">
+                            <span>Flexible</span>
+                            <span>Bendable</span>
+                            <span>Fun to Play</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ornaments -->
+            <div class="category-section">
+                <h3 class="category-title">🎄 Holiday Ornaments</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Christmas Ornaments</h3>
+                        <p>Custom holiday decorations and tree ornaments</p>
+                        <div class="product-features">
+                            <span>Personalized</span>
+                            <span>Festive Colors</span>
+                            <span>Durable</span>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="openHalloweenModal()">
+                        <div class="product-image">
+                            <img src="fest.jpg" alt="Halloween Props" class="toy-preview">
+                        </div>
+                        <h3>Halloween Props</h3>
+                        <p>Spooky decorations and Halloween-themed props</p>
+                        <div class="product-features">
+                            <span>Spooky Design</span>
+                            <span>Halloween Theme</span>
+                            <span>Festive</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3>Party Decorations</h3>
+                        <p>Birthday and celebration decorations</p>
+                        <div class="product-features">
+                            <span>Colorful</span>
+                            <span>Fun Designs</span>
+                            <span>Reusable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Useful Tools -->
+            <div class="category-section">
+                <h3 class="category-title">🔧 Useful Tools</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Workshop Tools</h3>
+                        <p>Custom jigs, holders, and workshop accessories</p>
+                        <div class="product-features">
+                            <span>Precise Fit</span>
+                            <span>Durable</span>
+                            <span>Custom Size</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Accessories</h3>
+                        <p>Cases, stands, and phone holders</p>
+                        <div class="product-features">
+                            <span>Perfect Fit</span>
+                            <span>Protective</span>
+                            <span>Stylish</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Solutions</h3>
+                        <p>Organizers, hooks, and household helpers</p>
+                        <div class="product-features">
+                            <span>Functional</span>
+                            <span>Space Saving</span>
+                            <span>Custom Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Art Section - Statues & Relief Sculptures -->
+    <section id="custom" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Custom Art & Sculptures</h2>
+            <p class="section-subtitle">Personalized figures and artistic relief sculptures</p>
+            
+            <!-- Custom Statues -->
+            <div class="category-section">
+                <h3 class="category-title">👤 Custom Statues & Figures</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Portrait Busts</h3>
+                        <p>Detailed 3D portraits from photos</p>
+                        <div class="product-features">
+                            <span>High Detail</span>
+                            <span>Lifelike</span>
+                            <span>Memorial Quality</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h3>Pet Memorials</h3>
+                        <p>Loving tributes to your beloved pets</p>
+                        <div class="product-features">
+                            <span>Emotional</span>
+                            <span>Detailed</span>
+                            <span>Memorial</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Awards & Trophies</h3>
+                        <p>Custom awards and recognition pieces</p>
+                        <div class="product-features">
+                            <span>Prestigious</span>
+                            <span>Custom Text</span>
+                            <span>Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Relief Sculptures -->
+            <div class="category-section">
+                <h3 class="category-title">🎨 Relief Sculptures</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Nature Reliefs</h3>
+                        <p>Landscape and nature-inspired wall art</p>
+                        <div class="product-features">
+                            <span>Artistic</span>
+                            <span>Natural</span>
+                            <span>Wall Mounted</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Architectural Elements</h3>
+                        <p>Decorative moldings and architectural details</p>
+                        <div class="product-features">
+                            <span>Decorative</span>
+                            <span>Architectural</span>
+                            <span>Custom Size</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Artistic Reliefs</h3>
+                        <p>Custom artistic wall decorations</p>
+                        <div class="product-features">
+                            <span>Creative</span>
+                            <span>Unique</span>
+                            <span>Personalized</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Printing Solutions -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">3D Printing Solutions</h2>
+            <p class="section-subtitle">Complete 3D printing solutions for your needs</p>
+            
+            <!-- From Imagination to Creation -->
+            <div class="subsection">
+                <h3 class="subsection-title">From Imagination to Creation</h3>
+                <div class="creation-showcase" onclick="openCreationModal()">
+                    <div class="creation-content">
+                        <div class="creation-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4>Complete 3D Printing Process</h4>
+                        <p>From design to delivery, we handle every step of your project</p>
+                        <div class="process-steps">
+                            <div class="step">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Design</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-print"></i>
+                                <span>Print</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Finish</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Deliver</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto Repairing Solutions -->
+            <div class="subsection section-alt">
+                <h3 class="subsection-title">Auto Repairing Solutions</h3>
+                <p class="subsection-subtitle">Professional automotive repair services and 3D printed replacement parts</p>
+                <div class="services-grid">
+                    <div class="service-card repair-card" onclick="openRepairModal()">
+                        <div class="service-background"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h4>3D Printed Parts</h4>
+                            <p>Custom 3D printed replacement parts for vehicles</p>
+                            <div class="product-features">
+                                <span>Custom Design</span>
+                                <span>Precise Fit</span>
+                                <span>Durable</span>
+                            </div>
+                        </div>
+                        <div class="hover-text">Click for more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to bring your ideas to life? Contact us today!</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@octoforgestudio.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Print Street<br>Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OctoForge Studio</h3>
+                    <p>Bringing your ideas to life with professional 3D printing services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#products">3D Printed Products</a></li>
+                        <li><a href="#custom">Custom Art</a></li>
+                        <li><a href="#services">3D Printing Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@octoforgestudio.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Print Street, Tech City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OctoForge Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Toy Images -->
+    <div id="toyModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-images-container">
+                <div class="image-pair">
+                    <img id="modalImage1" src="" alt="" class="modal-image">
+                    <img id="modalImage2" src="" alt="" class="modal-image">
+                </div>
+            </div>
+            <h3 id="modalTitle"></h3>
+        </div>
+    </div>
+
+    <!-- Modal for Repair Services -->
+    <div id="repairModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-images-container">
+                <div class="image-pair">
+                    <img id="repairImage1" src="repair1.png" alt="Repair Service 1" class="modal-image">
+                    <img id="repairImage2" src="repair2.png" alt="Repair Service 2" class="modal-image">
+                </div>
+            </div>
+            <h3>Auto Repairing Solutions</h3>
+            <div class="repair-description">
+                <p>Professional automotive repair services with expert technicians and modern equipment. We provide comprehensive diagnostic services, quality repairs, and custom 3D printed replacement parts for precise fit and durability.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Creation Process -->
+    <div id="creationModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-images-container">
+                <div class="image-pair">
+                    <img id="creationImage1" src="chat1.png" alt="Creation Process 1" class="modal-image">
+                    <img id="creationImage2" src="chat.png" alt="Creation Process 2" class="modal-image">
+                </div>
+            </div>
+            <h3>From Imagination to Creation</h3>
+            <div class="creation-description">
+                <p>At OctoForge Studio, we turn your ideas into tangible works of art. From the first sketch to the final polished model, our team handles every step — design, printing, finishing, and delivery. Whether it's a custom figure, ornament, or tool, we bring precision, creativity, and innovation together to make your imagination real.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
