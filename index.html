@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OctoForge Studio - Custom 3D Printing Services</title>
+    <title>S.I.T.R.A - Shaping Imagination To Reality Anywhere</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -12,14 +13,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="icon.png" alt="OctoForge Studio Logo" class="logo-icon">
-                <span>OctoForge Studio</span>
+                <img src="icon.png" alt="S.I.T.R.A Logo" class="logo-icon">
+                <span>S.I.T.R.A</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
-                <li><a href="#custom">Custom Art</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -33,12 +34,13 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Bringing Your Ideas to Life</h1>
-            <p>Turning imagination into reality through high-precision 3D printing — from collectible toys and ornaments to custom tools, statues, and relief art.</p>
+            <h1>Shaping Imagination To Reality Anywhere</h1>
+            <p>Turning imagination into reality through high-precision 3D printing — from collectible toys and ornaments to custom tools, statues, and more</p>
             <div class="hero-buttons">
                 <a href="#products" class="btn btn-primary">Our Products</a>
                 <a href="#contact" class="btn btn-primary">Get Quote</a>
                 <a href="#services" class="btn btn-secondary">Our Services</a>
+                <a href="#about" class="btn btn-secondary">About Us</a>
             </div>
         </div>
         <div class="hero-image">
@@ -66,7 +68,7 @@
             
             <!-- Toys -->
             <div class="category-section">
-                <h3 class="category-title">🧸 3D Printed Toys</h3>
+                <h3 class="category-title">3D Printed Toys</h3>
                 <div class="products-grid">
                     <div class="product-card" onclick="openTelescopingModal()">
                         <div class="product-image">
@@ -79,6 +81,7 @@
                             <span>Safe Design</span>
                             <span>Durable</span>
                         </div>
+                        <div class="hover-text">Click for more</div>
                     </div>
                     <div class="product-card" onclick="openFlexibleModal()">
                         <div class="product-image">
@@ -91,6 +94,7 @@
                             <span>Bendable</span>
                             <span>Fun to Play</span>
                         </div>
+                        <div class="hover-text">Click for more</div>
                     </div>
                 </div>
             </div>
@@ -122,18 +126,7 @@
                             <span>Halloween Theme</span>
                             <span>Festive</span>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-birthday-cake"></i>
-                        </div>
-                        <h3>Party Decorations</h3>
-                        <p>Birthday and celebration decorations</p>
-                        <div class="product-features">
-                            <span>Colorful</span>
-                            <span>Fun Designs</span>
-                            <span>Reusable</span>
-                        </div>
+                        <div class="hover-text">Click for more</div>
                     </div>
                 </div>
             </div>
@@ -142,9 +135,9 @@
             <div class="category-section">
                 <h3 class="category-title">🔧 Useful Tools</h3>
                 <div class="products-grid">
-                    <div class="product-card">
+                    <div class="product-card" onclick="openWorkshopToolsModal()">
                         <div class="product-image">
-                            <i class="fas fa-tools"></i>
+                            <img src="tool1.png" alt="Workshop Tools" class="toy-preview">
                         </div>
                         <h3>Workshop Tools</h3>
                         <p>Custom jigs, holders, and workshop accessories</p>
@@ -153,22 +146,11 @@
                             <span>Durable</span>
                             <span>Custom Size</span>
                         </div>
+                        <div class="hover-text">Click for more</div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" onclick="openHomeSolutionsModal()">
                         <div class="product-image">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Phone Accessories</h3>
-                        <p>Cases, stands, and phone holders</p>
-                        <div class="product-features">
-                            <span>Perfect Fit</span>
-                            <span>Protective</span>
-                            <span>Stylish</span>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-home"></i>
+                            <img src="home.png" alt="Home Solutions" class="toy-preview">
                         </div>
                         <h3>Home Solutions</h3>
                         <p>Organizers, hooks, and household helpers</p>
@@ -177,100 +159,7 @@
                             <span>Space Saving</span>
                             <span>Custom Design</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Art Section - Statues & Relief Sculptures -->
-    <section id="custom" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Custom Art & Sculptures</h2>
-            <p class="section-subtitle">Personalized figures and artistic relief sculptures</p>
-            
-            <!-- Custom Statues -->
-            <div class="category-section">
-                <h3 class="category-title">👤 Custom Statues & Figures</h3>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h3>Portrait Busts</h3>
-                        <p>Detailed 3D portraits from photos</p>
-                        <div class="product-features">
-                            <span>High Detail</span>
-                            <span>Lifelike</span>
-                            <span>Memorial Quality</span>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-paw"></i>
-                        </div>
-                        <h3>Pet Memorials</h3>
-                        <p>Loving tributes to your beloved pets</p>
-                        <div class="product-features">
-                            <span>Emotional</span>
-                            <span>Detailed</span>
-                            <span>Memorial</span>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3>Awards & Trophies</h3>
-                        <p>Custom awards and recognition pieces</p>
-                        <div class="product-features">
-                            <span>Prestigious</span>
-                            <span>Custom Text</span>
-                            <span>Professional</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Relief Sculptures -->
-            <div class="category-section">
-                <h3 class="category-title">🎨 Relief Sculptures</h3>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <h3>Nature Reliefs</h3>
-                        <p>Landscape and nature-inspired wall art</p>
-                        <div class="product-features">
-                            <span>Artistic</span>
-                            <span>Natural</span>
-                            <span>Wall Mounted</span>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>Architectural Elements</h3>
-                        <p>Decorative moldings and architectural details</p>
-                        <div class="product-features">
-                            <span>Decorative</span>
-                            <span>Architectural</span>
-                            <span>Custom Size</span>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3>Artistic Reliefs</h3>
-                        <p>Custom artistic wall decorations</p>
-                        <div class="product-features">
-                            <span>Creative</span>
-                            <span>Unique</span>
-                            <span>Personalized</span>
-                        </div>
+                        <div class="hover-text">Click for more</div>
                     </div>
                 </div>
             </div>
@@ -291,7 +180,7 @@
                         <div class="creation-icon">
                             <i class="fas fa-magic"></i>
                         </div>
-                        <h4>Complete 3D Printing Process</h4>
+                        <h4>Create Anything from an Idea</h4>
                         <p>From design to delivery, we handle every step of your project</p>
                         <div class="process-steps">
                             <div class="step">
@@ -312,6 +201,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="hover-text">Click for more</div>
                 </div>
             </div>
 
@@ -338,6 +228,141 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Custom Art & Sculptures -->
+            <div class="subsection">
+                <h2 class="section-title">Custom Art & Sculptures</h2>
+                <p class="section-subtitle">Personalized arts and souvenirs</p>
+                
+                <!-- Custom Statues -->
+                <div class="category-section">
+                    <h3 class="category-title">👤 Custom Statues & Figures</h3>
+                    <div class="products-grid">
+                        <div class="product-card" onclick="openPortraitModal()">
+                            <div class="product-image">
+                                <img src="prot.jpg" alt="Portrait Busts" class="toy-preview">
+                            </div>
+                            <h3>Portrait Busts</h3>
+                            <p>Detailed 3D portraits from photos</p>
+                            <div class="product-features">
+                                <span>High Detail</span>
+                                <span>Lifelike</span>
+                                <span>Memorial Quality</span>
+                            </div>
+                            <div class="hover-text">Click for more</div>
+                        </div>
+                        <div class="product-card" onclick="openPetEquipmentsModal()">
+                            <div class="product-image">
+                                <img src="pettag.png" alt="Customized Pet Equipments" class="toy-preview">
+                            </div>
+                            <h3>Customized Pet Equipments</h3>
+                            <p>Personalized pet accessories and equipment tailored for your furry friends</p>
+                            <div class="product-features">
+                                <span>Personalized</span>
+                                <span>Custom Design</span>
+                                <span>Pet-Safe</span>
+                            </div>
+                            <div class="hover-text">Click for more</div>
+                        </div>
+                        <div class="product-card" onclick="openMaglevModal()">
+                            <div class="product-image">
+                                <img src="maglev.gif" alt="Customized Maglev Ornament" class="toy-preview">
+                            </div>
+                            <h3>Customized Maglev Ornament</h3>
+                            <p>Floating magnetic ornaments that combine science and artistry</p>
+                            <div class="product-features">
+                                <span>Magnetic Levitation</span>
+                                <span>Floating Design</span>
+                                <span>Customizable</span>
+                            </div>
+                            <div class="hover-text">Click for more</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section section-alt about-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <img src="icon.png" alt="S.I.T.R.A Logo" class="logo-icon" style="width: 200px; height: 200px; margin: 0 auto; display: block; filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.3));">
+            </div>
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Bringing creativity and innovation to real world with 3D printing</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to S.I.T.R.A</h3>
+                    <p><strong>S.I.T.R.A</strong> - Shaping Imagination To Reality Anywhere. At S.I.T.R.A, we combine the excitement of flea market entrepreneurship with cutting-edge 3D printing technology. We're passionate about creating unique, high-quality 3D printed products and providing comprehensive 3D printing services to bring your ideas to life.</p>
+                    
+                    <h3 style="margin-top: 2rem;">What We Do</h3>
+                    <p><strong>Flea Market Sales:</strong> We specialize in selling beautifully crafted 3D printed toys and ornaments at flea markets. Our collection features everything from extendable telescoping weapons and flexible action figures to festive holiday decorations and Halloween props. Each piece is carefully designed and printed with attention to detail and quality.</p>
+                    
+                    <p style="margin-top: 1rem;"><strong>3D Printing Services:</strong> Beyond our product line, we offer a wide range of custom 3D printing services tailored to your needs:</p>
+                    <ul class="services-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Auto Repairing Solutions:</strong> Custom 3D printed replacement parts for vehicles with precise fit and durability</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Customized Busts:</strong> Detailed 3D portrait busts from photos, perfect for memorials, awards, or personal keepsakes</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Customized Pet Equipments:</strong> Personalized pet accessories and equipment including tags, holders, and custom pet accessories with custom designs</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Workshop Tools:</strong> Custom jigs, holders, and workshop accessories designed to your specifications</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Home Solutions:</strong> Functional household items like organizers, hooks, and decorative accessories</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>And Everything Else You Can Imagine:</strong> From custom art pieces to specialized tools, if you can envision it, we can help bring it to life with 3D printing technology</li>
+                    </ul>
+                    
+                    <p style="margin-top: 2rem;">Our mission is to make 3D printing accessible and affordable while maintaining the highest standards of quality and craftsmanship. Whether you're looking for a unique toy at the flea market or need a custom solution for your specific requirements, S.I.T.R.A is here to help turn your imagination into reality.</p>
+                </div>
+            </div>
+
+            <!-- Our History Section -->
+            <div class="history-section">
+                <h3 class="history-title">Our History</h3>
+                <p class="history-subtitle">Our journey through flea markets across the Greater Toronto Area</p>
+                
+                <div class="history-gallery">
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp1.jpg')">
+                            <img src="exp1.jpg" alt="Flea Market - Oakville" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp2.jpg')">
+                            <img src="exp2.jpg" alt="Flea Market - Markham" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp3.jpg')">
+                            <img src="exp3.jpg" alt="Flea Market - Burlington" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp4.jpg')">
+                            <img src="exp4.jpg" alt="Flea Market Experience" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp5.jpg')">
+                            <img src="exp5.jpg" alt="Flea Market Experience" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp6.jpg')">
+                            <img src="exp6.jpg" alt="Flea Market Experience" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp7.jpg')">
+                            <img src="exp7.jpg" alt="Flea Market Experience" class="history-image">
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-image-wrapper" onclick="toggleHistoryImage('exp8.jpg')">
+                            <img src="exp8.jpg" alt="Flea Market Experience" class="history-image">
+                        </div>
+                    </div>
+                </div>
+                <p class="history-description">These are our past flea market footprints in Oakville, Markham, and Burlington, where we've connected with communities and shared our passion for 3D printed creations.</p>
+            </div>
         </div>
     </section>
 
@@ -352,39 +377,17 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>1-289-952-9500</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p>info@octoforgestudio.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>123 Print Street<br>Tech City, TC 12345</p>
+                            <p>jiangzaixi836@gmail.com</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -394,8 +397,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>OctoForge Studio</h3>
-                    <p>Bringing your ideas to life with professional 3D printing services.</p>
+                    <h3>S.I.T.R.A</h3>
+                    <p>Shaping Imagination To Reality Anywhere - Professional 3D printing services.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -407,7 +410,6 @@
                     <h3>Services</h3>
                     <ul>
                         <li><a href="#products">3D Printed Products</a></li>
-                        <li><a href="#custom">Custom Art</a></li>
                         <li><a href="#services">3D Printing Services</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
@@ -417,19 +419,19 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@octoforgestudio.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Print Street, Tech City</p>
+                    <p><i class="fas fa-phone"></i> 1-289-952-9500</p>
+                    <p><i class="fas fa-envelope"></i> jiangzaixi836@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Greater Toronto Area, ON</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 OctoForge Studio. All rights reserved.</p>
+                <p>&copy; 2024 S.I.T.R.A. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -437,21 +439,24 @@
     <!-- Modal for Toy Images -->
     <div id="toyModal" class="modal">
         <div class="modal-content">
-            
+            <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-images-container">
-                <div class="image-pair">
-                    <img id="modalImage1" src="" alt="" class="modal-image">
-                    <img id="modalImage2" src="" alt="" class="modal-image">
+                <div class="image-pair" style="justify-content: center; gap: 2rem;">
+                    <img id="modalImage1" src="" alt="" class="modal-image" style="max-width: 35%; max-height: none; height: auto; object-fit: contain;">
+                    <img id="modalImage2" src="" alt="" class="modal-image" style="max-width: 35%; max-height: none; height: auto; object-fit: contain;">
                 </div>
             </div>
             <h3 id="modalTitle"></h3>
+            <div class="modal-description">
+                <p id="modalDescription"></p>
+            </div>
         </div>
     </div>
 
     <!-- Modal for Repair Services -->
     <div id="repairModal" class="modal">
         <div class="modal-content">
-            
+            <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-images-container">
                 <div class="image-pair">
                     <img id="repairImage1" src="repair1.png" alt="Repair Service 1" class="modal-image">
@@ -468,18 +473,159 @@
     <!-- Modal for Creation Process -->
     <div id="creationModal" class="modal">
         <div class="modal-content">
-            
-            <div class="modal-images-container">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 800px;">
                 <div class="image-pair">
                     <img id="creationImage1" src="chat1.png" alt="Creation Process 1" class="modal-image">
                     <img id="creationImage2" src="chat.png" alt="Creation Process 2" class="modal-image">
                 </div>
+                <div class="image-pair">
+                    <img id="creationImage3" src="costumized.jpg" alt="Customized Creation Example 1" class="modal-image" style="max-height: none; height: auto; object-fit: contain;">
+                    <img id="creationImage4" src="costumized2.jpg" alt="Customized Creation Example 2" class="modal-image" style="max-height: none; height: auto; object-fit: contain;">
+                </div>
             </div>
             <h3>From Imagination to Creation</h3>
             <div class="creation-description">
-                <p>At OctoForge Studio, we turn your ideas into tangible works of art. From the first sketch to the final polished model, our team handles every step — design, printing, finishing, and delivery. Whether it's a custom figure, ornament, or tool, we bring precision, creativity, and innovation together to make your imagination real.</p>
+                <p>At S.I.T.R.A (Shaping Imagination To Reality Anywhere), we turn your ideas into tangible works of art. From the first sketch to the final polished model, our team handles every step — design, printing, finishing, and delivery. Whether it's a custom figure, ornament, or tool, we bring precision, creativity, and innovation together to make your imagination real.</p>
+                <p style="margin-top: 1rem; font-style: italic;">See the examples above showcasing our customized creations - from initial concept discussions to beautifully finished 3D printed masterpieces. Each project is crafted with attention to detail, ensuring that your unique vision becomes a reality with exceptional quality and precision.</p>
             </div>
         </div>
+    </div>
+
+    <!-- Modal for Portrait Busts -->
+    <div id="portraitModal" class="modal">
+        <div class="modal-content" style="max-height: 90vh;">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 750px; min-height: 500px;">
+                <div class="image-pair" style="justify-content: center;">
+                    <img id="portraitImage1" src="prot.jpg" alt="Portrait Busts" class="modal-image" style="max-width: 40%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+            <h3>Portrait Busts</h3>
+            <div class="modal-description-slider">
+                <div class="slider-container">
+                    <div class="slider-track" id="portraitSliderTrack">
+                        <div class="slider-slide active">
+                            <p>Create stunning 3D portrait busts from your photos with our advanced 3D printing technology. Our customized portrait process transforms your favorite photographs into detailed, lifelike sculptures that capture every nuance of expression and character.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <p><strong>1. Photo Submission</strong></p>
+                            <p>You provide us with high-quality photos from multiple angles - front, side, and optional profile views. The more reference images, the better we can capture your unique features.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <p><strong>2. 3D Modeling</strong></p>
+                            <p>Our skilled artists use advanced photogrammetry and 3D modeling software to create a detailed digital 3D model that accurately represents facial structure, expressions, and distinguishing features.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <p><strong>3. Design Refinement</strong></p>
+                            <p>We work with you to refine the model, ensuring it captures the essence and personality of the subject. Adjustments can be made to proportions, expressions, and fine details.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <p><strong>4. 3D Printing</strong></p>
+                            <p>Once approved, your portrait is printed using high-resolution 3D printing technology, layer by layer, with attention to surface quality and dimensional accuracy.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <p><strong>5. Finishing & Post-Processing</strong></p>
+                            <p>The bust undergoes careful post-processing - sanding, smoothing, and optional painting or coloring to achieve the desired finish, whether matte, glossy, or natural material appearance.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <p>The result is a memorial-quality portrait bust that serves as a meaningful keepsake, tribute, or artistic statement piece. Perfect for honoring loved ones, celebrating achievements, or creating personalized art for your home or office.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="changePortraitSlide(-1)">❮ Prev</button>
+                    <span class="slider-dots" id="portraitSliderDots"></span>
+                    <button class="slider-btn next-btn" onclick="changePortraitSlide(1)">Next ❯</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Home Solutions -->
+    <div id="homeSolutionsModal" class="modal">
+        <div class="modal-content" style="max-height: 95vh;">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 600px; overflow-y: auto;">
+                <div class="image-pair" style="justify-content: center; align-items: center;">
+                    <img id="homeImage1" src="home.png" alt="Home Solutions - Tissue Box Holder" class="modal-image" style="max-width: 40%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+            <h3>Home Solutions</h3>
+            <div class="modal-description">
+                <p>Transform your living space with our custom 3D printed home solutions. This example showcases a beautifully designed tissue box holder that combines functionality with aesthetic appeal. Our home solutions range from practical organizers and hooks to decorative household helpers that make everyday life more convenient and organized.</p>
+                <p style="margin-top: 1rem;"><strong>Featured Example - Tissue Box Holder:</strong> This custom 3D printed tissue box holder demonstrates how we can create functional home accessories that perfectly fit your space and style. Each piece is designed to be both practical and visually appealing, made with durable materials that will last for years. Whether you need organizers, hooks, storage solutions, or decorative items, we can design and print custom home solutions tailored to your specific needs and preferences.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Workshop Tools -->
+    <div id="workshopToolsModal" class="modal">
+        <div class="modal-content" style="max-height: 95vh;">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 600px; overflow-y: auto;">
+                <div class="image-pair" style="justify-content: center; align-items: center;">
+                    <img id="workshopImage1" src="tool1.png" alt="Workshop Tools" class="modal-image" style="max-width: 40%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+            <h3>Workshop Tools</h3>
+            <div class="modal-description">
+                <p>Enhance your workshop with our custom 3D printed tools, jigs, holders, and accessories. Our precision-engineered workshop solutions are designed to fit your specific needs, improving efficiency and organization in your workspace.</p>
+                <p style="margin-top: 1rem;">Our 3D printed workshop tools include custom jigs for precise cutting and drilling, specialized holders for tools and materials, measurement aids, and organizational accessories. Each piece is designed to your exact specifications, ensuring perfect fit and functionality for your unique workshop setup.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Customized Pet Equipments -->
+    <div id="petEquipmentsModal" class="modal">
+        <div class="modal-content" style="max-height: 95vh;">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 600px; overflow-y: auto;">
+                <div class="image-pair" style="justify-content: center; align-items: center;">
+                    <img id="petImage1" src="pettag.png" alt="Customized Pet Equipments" class="modal-image" style="max-width: 40%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+            <h3>Customized Pet Equipments</h3>
+            <div class="modal-description">
+                <p>Show your furry friends how much you care with our custom 3D printed pet equipments. We offer a wide range of personalized pet accessories designed to meet your pet's unique needs and your personal style preferences.</p>
+                <p style="margin-top: 1rem;"><strong>What We Offer:</strong></p>
+                <ul style="text-align: left; max-width: 800px; margin: 1rem auto; color: #64748b; line-height: 1.8;">
+                    <li><strong>Customized Pet Tags:</strong> Personalized identification tags with your pet's name, your contact information, and custom designs. Made from durable, pet-safe materials that withstand daily wear and outdoor conditions.</li>
+                    <li><strong>Pet Costumes:</strong> Fun and creative 3D printed costume accessories for special occasions, holidays, or just for fun. From hats and accessories to full costume pieces, we can create unique outfits that make your pet stand out.</li>
+                    <li><strong>Memorial Sculptures:</strong> Beautiful, detailed memorial sculptures to honor your beloved pets. These lifelike 3D printed sculptures capture your pet's unique features and personality, creating a lasting tribute and keepsake.</li>
+                </ul>
+                <p style="margin-top: 1.5rem;">All our pet equipments are designed with your pet's safety and comfort in mind, using non-toxic, durable materials. Whether you need a practical pet tag, a fun costume piece, or a meaningful memorial sculpture, we can create custom solutions that celebrate your special bond with your pet.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Customized Maglev Ornament -->
+    <div id="maglevModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 600px; overflow-y: auto;">
+                <div class="image-pair" style="justify-content: center; align-items: center;">
+                    <img id="maglevImage1" src="maglev.gif" alt="Customized Maglev Ornament" class="modal-image" style="max-width: 50%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+            <h3>Customized Maglev Ornament</h3>
+            <div class="modal-description">
+                <p>Experience the wonder of magnetic levitation with our customized maglev ornaments. These stunning 3D printed pieces combine cutting-edge technology with artistic design, creating mesmerizing floating decorations that capture attention and spark conversation.</p>
+                <p style="margin-top: 1rem;"><strong>Features:</strong></p>
+                <ul style="text-align: left; max-width: 800px; margin: 1rem auto; color: #64748b; line-height: 1.8;">
+                    <li><strong>Magnetic Levitation Technology:</strong> Advanced magnetic systems create stable, smooth levitation that keeps your ornament floating effortlessly in the air.</li>
+                    <li><strong>Customizable Designs:</strong> We can create maglev ornaments in various shapes, sizes, and styles to match your preferences - from geometric patterns to intricate sculptures.</li>
+                    <li><strong>High-Quality 3D Printing:</strong> Precision 3D printed components ensure perfect balance and smooth operation for the best levitation experience.</li>
+                    <li><strong>Unique Gift Idea:</strong> Perfect as a conversation starter, modern decoration, or special gift that combines science, art, and innovation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Image Lightbox -->
+    <div id="historyLightbox" class="history-lightbox" onclick="toggleHistoryImage(null)">
+        <span class="history-close" onclick="toggleHistoryImage(null)">&times;</span>
+        <img id="historyExpandedImage" src="" alt="Expanded History Image" class="history-expanded-image" onclick="event.stopPropagation()">
     </div>
 
     <script src="script.js"></script>
