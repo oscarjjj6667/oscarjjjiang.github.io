@@ -486,6 +486,14 @@ function openMaglevModal() {
     document.body.style.overflow = 'hidden';
 }
 
+function openChristmasModal() {
+    const modal = document.getElementById('christmasModal');
+    modal.style.display = 'block';
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
 function closeModal() {
     const toyModal = document.getElementById('toyModal');
     const repairModal = document.getElementById('repairModal');
@@ -495,6 +503,7 @@ function closeModal() {
     const workshopToolsModal = document.getElementById('workshopToolsModal');
     const petEquipmentsModal = document.getElementById('petEquipmentsModal');
     const maglevModal = document.getElementById('maglevModal');
+    const christmasModal = document.getElementById('christmasModal');
     
     if (toyModal) toyModal.style.display = 'none';
     if (repairModal) repairModal.style.display = 'none';
@@ -504,6 +513,7 @@ function closeModal() {
     if (workshopToolsModal) workshopToolsModal.style.display = 'none';
     if (petEquipmentsModal) petEquipmentsModal.style.display = 'none';
     if (maglevModal) maglevModal.style.display = 'none';
+    if (christmasModal) christmasModal.style.display = 'none';
     
     // Restore body scroll
     document.body.style.overflow = 'auto';
@@ -636,6 +646,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const maglevModalContent = maglevModal.querySelector('.modal-content');
         if (maglevModalContent) {
             maglevModalContent.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+    }
+    
+    if (christmasModal) {
+        christmasModal.addEventListener('click', (e) => {
+            if (e.target === christmasModal) {
+                closeModal();
+            }
+        });
+        
+        // Prevent modal-content clicks from closing the modal
+        const christmasModalContent = christmasModal.querySelector('.modal-content');
+        if (christmasModalContent) {
+            christmasModalContent.addEventListener('click', (e) => {
                 e.stopPropagation();
             });
         }

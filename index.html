@@ -103,9 +103,9 @@
             <div class="category-section">
                 <h3 class="category-title">🎄 Holiday Ornaments</h3>
                 <div class="products-grid">
-                    <div class="product-card">
+                    <div class="product-card" onclick="openChristmasModal()">
                         <div class="product-image">
-                            <i class="fas fa-star"></i>
+                            <img src="christmas.png" alt="Christmas Ornaments" class="toy-preview">
                         </div>
                         <h3>Christmas Ornaments</h3>
                         <p>Custom holiday decorations and tree ornaments</p>
@@ -114,6 +114,7 @@
                             <span>Festive Colors</span>
                             <span>Durable</span>
                         </div>
+                        <div class="hover-text">Click for more</div>
                     </div>
                     <div class="product-card" onclick="openHalloweenModal()">
                         <div class="product-image">
@@ -323,41 +324,49 @@
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp1.jpg')">
                             <img src="exp1.jpg" alt="Flea Market - Oakville" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp2.jpg')">
                             <img src="exp2.jpg" alt="Flea Market - Markham" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp3.jpg')">
                             <img src="exp3.jpg" alt="Flea Market - Burlington" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp4.jpg')">
                             <img src="exp4.jpg" alt="Flea Market Experience" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp5.jpg')">
                             <img src="exp5.jpg" alt="Flea Market Experience" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp6.jpg')">
                             <img src="exp6.jpg" alt="Flea Market Experience" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp7.jpg')">
                             <img src="exp7.jpg" alt="Flea Market Experience" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                     <div class="history-item">
                         <div class="history-image-wrapper" onclick="toggleHistoryImage('exp8.jpg')">
                             <img src="exp8.jpg" alt="Flea Market Experience" class="history-image">
+                            <div class="history-hover-text">Click to expand</div>
                         </div>
                     </div>
                 </div>
@@ -617,6 +626,29 @@
                     <li><strong>Customizable Designs:</strong> We can create maglev ornaments in various shapes, sizes, and styles to match your preferences - from geometric patterns to intricate sculptures.</li>
                     <li><strong>High-Quality 3D Printing:</strong> Precision 3D printed components ensure perfect balance and smooth operation for the best levitation experience.</li>
                     <li><strong>Unique Gift Idea:</strong> Perfect as a conversation starter, modern decoration, or special gift that combines science, art, and innovation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Christmas Ornaments -->
+    <div id="christmasModal" class="modal">
+        <div class="modal-content" style="max-height: 90vh; overflow-y: auto;">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-images-container" style="max-height: 500px; overflow-y: auto;">
+                <div class="image-pair" style="justify-content: center; align-items: center;">
+                    <img id="christmasImage1" src="christmas.png" alt="Christmas Ornaments" class="modal-image" style="max-width: 50%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+            <h3>Christmas Ornaments</h3>
+            <div class="modal-description" style="padding: 2rem 1.5rem;">
+                <p>Celebrate the holiday season with our beautifully crafted 3D printed Christmas ornaments. Each ornament is meticulously designed and printed to bring festive cheer to your home, tree, or as thoughtful gifts for loved ones.</p>
+                <p style="margin-top: 1rem;"><strong>Features:</strong></p>
+                <ul style="text-align: left; max-width: 800px; margin: 1rem auto; color: #64748b; line-height: 1.8;">
+                    <li><strong>Custom Designs:</strong> Personalized ornaments featuring names, dates, or custom designs that make each piece unique and meaningful.</li>
+                    <li><strong>Festive Colors:</strong> Available in a variety of holiday colors including traditional red, green, gold, silver, and custom color combinations.</li>
+                    <li><strong>Durable Materials:</strong> Made with high-quality 3D printing materials that are long-lasting and can be cherished for years to come.</li>
+                    <li><strong>Versatile Decorations:</strong> Perfect for Christmas trees, gift wrapping, holiday displays, or as keepsake ornaments that commemorate special moments.</li>
                 </ul>
             </div>
         </div>
