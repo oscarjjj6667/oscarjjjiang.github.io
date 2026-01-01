@@ -167,6 +167,8 @@ body {
     flex-wrap: nowrap;
     justify-content: flex-end;
     margin-right: -80px;
+    position: relative;
+    z-index: 10;
 }
 
 .btn {
@@ -185,6 +187,8 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
     flex-shrink: 0;
+    z-index: 11;
+    pointer-events: auto;
 }
 
 .btn::before {
@@ -238,8 +242,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 1;
     position: relative;
+    pointer-events: none;
 }
 
 .hero-screenshot {
