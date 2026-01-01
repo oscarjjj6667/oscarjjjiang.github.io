@@ -305,6 +305,47 @@ revealStyle.textContent = `
 `;
 document.head.appendChild(revealStyle);
 
+// Toy Image Slider Variables
+let toyImageCurrentSlide = 0;
+let toyImageAutoSlideInterval = null;
+
+function initToyImageSlider() {
+    const sliderTrack = document.getElementById('toyImageSliderTrack');
+    const sliderDots = document.getElementById('toyImageSliderDots');
+    
+    if (!sliderTrack || !sliderDots) {
+        return;
+    }
+    
+    // Hide dots since we're showing both images at once
+    sliderDots.style.display = 'none';
+    
+    const slides = sliderTrack.querySelectorAll('.toy-image-slider-slide');
+    
+    if (slides.length === 0) {
+        return;
+    }
+    
+    // Make both slides active (visible) at the same time
+    slides.forEach((slide) => {
+        slide.classList.add('active');
+    });
+    
+    // Clear any existing interval since we don't need auto-switching for two images
+    if (toyImageAutoSlideInterval) {
+        clearInterval(toyImageAutoSlideInterval);
+        toyImageAutoSlideInterval = null;
+    }
+}
+
+function switchToyImage(index) {
+    // Not needed when showing both images
+}
+
+function updateToyImageSlider() {
+    // Not needed when showing both images
+}
+
 // Modal functionality for toy images
 function openTelescopingModal() {
     const modal = document.getElementById('toyModal');
@@ -324,6 +365,11 @@ function openTelescopingModal() {
     
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
+    
+    // Initialize slider after modal is displayed
+    setTimeout(() => {
+        initToyImageSlider();
+    }, 300);
 }
 
 function openFlexibleModal() {
@@ -344,6 +390,11 @@ function openFlexibleModal() {
     
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
+    
+    // Initialize slider after modal is displayed
+    setTimeout(() => {
+        initToyImageSlider();
+    }, 300);
 }
 
 function openHalloweenModal() {
@@ -364,6 +415,11 @@ function openHalloweenModal() {
     
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
+    
+    // Initialize slider after modal is displayed
+    setTimeout(() => {
+        initToyImageSlider();
+    }, 300);
 }
 
 function openRepairModal() {
@@ -514,6 +570,12 @@ function closeModal() {
     if (petEquipmentsModal) petEquipmentsModal.style.display = 'none';
     if (maglevModal) maglevModal.style.display = 'none';
     if (christmasModal) christmasModal.style.display = 'none';
+    
+    // Clear toy image auto-slide interval
+    if (toyImageAutoSlideInterval) {
+        clearInterval(toyImageAutoSlideInterval);
+        toyImageAutoSlideInterval = null;
+    }
     
     // Restore body scroll
     document.body.style.overflow = 'auto';

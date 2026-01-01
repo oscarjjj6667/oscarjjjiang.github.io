@@ -447,16 +447,21 @@
 
     <!-- Modal for Toy Images -->
     <div id="toyModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-height: 90vh; overflow-y: auto;">
             <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-images-container">
-                <div class="image-pair" style="justify-content: center; gap: 2rem;">
-                    <img id="modalImage1" src="" alt="" class="modal-image" style="max-width: 35%; max-height: none; height: auto; object-fit: contain;">
-                    <img id="modalImage2" src="" alt="" class="modal-image" style="max-width: 35%; max-height: none; height: auto; object-fit: contain;">
+            <div class="modal-images-container" style="max-height: 650px; min-height: 500px; position: relative; overflow: hidden;">
+                <div class="toy-image-slider-track" id="toyImageSliderTrack">
+                    <div class="toy-image-slider-slide active" id="toySlide1">
+                        <img id="modalImage1" src="" alt="" class="modal-image" style="max-width: 48%; max-height: 600px; height: auto; object-fit: contain; margin: 0 auto; display: block;">
+                    </div>
+                    <div class="toy-image-slider-slide active" id="toySlide2">
+                        <img id="modalImage2" src="" alt="" class="modal-image" style="max-width: 48%; max-height: 600px; height: auto; object-fit: contain; margin: 0 auto; display: block;">
+                    </div>
                 </div>
+                <div class="toy-image-slider-dots" id="toyImageSliderDots" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10;"></div>
             </div>
             <h3 id="modalTitle"></h3>
-            <div class="modal-description">
+            <div class="modal-description" style="padding: 2rem 1.5rem;">
                 <p id="modalDescription"></p>
             </div>
         </div>
@@ -663,3 +668,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
