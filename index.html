@@ -449,19 +449,14 @@
     <div id="toyModal" class="modal">
         <div class="modal-content" style="max-height: 90vh; overflow-y: auto;">
             <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-images-container" style="max-height: 650px; min-height: 500px; position: relative; overflow: hidden;">
-                <div class="toy-image-slider-track" id="toyImageSliderTrack">
-                    <div class="toy-image-slider-slide active" id="toySlide1">
-                        <img id="modalImage1" src="" alt="" class="modal-image" style="max-width: 48%; max-height: 600px; height: auto; object-fit: contain; margin: 0 auto; display: block;">
-                    </div>
-                    <div class="toy-image-slider-slide active" id="toySlide2">
-                        <img id="modalImage2" src="" alt="" class="modal-image" style="max-width: 48%; max-height: 600px; height: auto; object-fit: contain; margin: 0 auto; display: block;">
-                    </div>
+            <div class="modal-images-container" style="max-height: 700px; min-height: 500px; padding: 2rem; display: flex; align-items: center; justify-content: center;">
+                <div class="image-pair" style="justify-content: center; gap: 2rem; width: 100%; align-items: center;">
+                    <img id="modalImage1" src="" alt="" class="modal-image" style="max-width: 28%; max-height: 600px; height: auto; object-fit: contain;">
+                    <img id="modalImage2" src="" alt="" class="modal-image" style="max-width: 28%; max-height: 600px; height: auto; object-fit: contain;">
                 </div>
-                <div class="toy-image-slider-dots" id="toyImageSliderDots" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10;"></div>
             </div>
-            <h3 id="modalTitle"></h3>
-            <div class="modal-description" style="padding: 2rem 1.5rem;">
+            <h3 id="modalTitle" style="overflow: visible; position: relative; z-index: 1;"></h3>
+            <div class="modal-description" style="padding: 2rem 1.5rem; min-height: 150px; max-height: 400px; overflow-y: auto;">
                 <p id="modalDescription"></p>
             </div>
         </div>
@@ -668,4 +663,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
