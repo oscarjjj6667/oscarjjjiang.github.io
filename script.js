@@ -709,16 +709,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// History Image Descriptions
+const historyImageDescriptions = {
+    'exp1.jpg': 'Flea market in Oakville',
+    'exp2.jpg': 'Talking to Mayor Burton of Oakville at the flea market',
+    'exp3.jpg': 'Flea market in Markham',
+    'exp4.jpg': 'Flea market experience in Oakville',
+    'exp5.jpg': 'Flea market in Milton',
+    'exp6.jpg': 'Flea market in Milton',
+    'exp7.jpg': 'Explaining our 3D printed creations to kids in Markham',
+    'exp8.jpg': 'Explaining to curious customers in Oakville'
+};
+
 // History Image Lightbox Functionality
 function toggleHistoryImage(imageSrc) {
     const lightbox = document.getElementById('historyLightbox');
     const expandedImage = document.getElementById('historyExpandedImage');
+    const descriptionElement = document.getElementById('historyImageDescription');
     
-    if (!lightbox || !expandedImage) return;
+    if (!lightbox) {
+        console.error('Lightbox element not found');
+        return;
+    }
     
-    if (imageSrc && !lightbox.classList.contains('active')) {
-        // Open lightbox
+    if (!expandedImage) {
+        console.error('Expanded image element not found');
+        return;
+    }
+    
+    if (imageSrc) {
+        // Open lightbox or switch image
         expandedImage.src = imageSrc;
+        // Set description
+        if (descriptionElement) {
+            descriptionElement.textContent = historyImageDescriptions[imageSrc] || '';
+        }
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     } else {
@@ -726,8 +751,16 @@ function toggleHistoryImage(imageSrc) {
         lightbox.classList.remove('active');
         document.body.style.overflow = 'auto';
         setTimeout(() => {
-            expandedImage.src = '';
+            if (expandedImage) {
+                expandedImage.src = '';
+            }
+            if (descriptionElement) {
+                descriptionElement.textContent = '';
+            }
         }, 300);
     }
 }
+
+// Make sure function is accessible globally
+window.toggleHistoryImage = toggleHistoryImage;
 
